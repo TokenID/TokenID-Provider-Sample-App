@@ -1,0 +1,42 @@
+{
+  "name": "tokenid-provider-sample",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2",
+    "key-encoder": "1.1.6",
+    "fs": "",
+    "pem": "1.9.4",
+    "request": "^2.79.0"
+  },
+  "description": "Token ID Provide Sample",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TokenID/TokenID-Provider-Sample-App.git"
+  },
+  "keywords": [
+    "TokenID",
+    "token",
+    "identity",
+    "blockchain",
+    "block",
+    "chain"
+  ],
+  "author": "Victor Ikoro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TokenID/TokenID-Provider-Sample-App/issues"
+  },
+  "homepage": "https://github.com/TokenID/TokenID-Provider-Sample-App#readme"
+}
