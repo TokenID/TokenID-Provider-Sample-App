@@ -43,8 +43,31 @@ let Customer = new Schema({
 })
 
 let Identity = new Schema({
+    id: ObjectId,
     providerEnrollmentID : String,
+    identityCode : String,
     identityTypeCode :  String,
+    issuerCode : String,
     issuerID : String,
+    issuerOrganization : String,
+    identityPayload : Object,
+    metaData: Object,
+    attachmentURI : String,
+    createdOn: { type: Date, default: Date.now },
+    updatedOn: Date,
+    createdBy: String,
+    lastUpdatedBy : String
     
 })
+
+let Partner = new Schema({
+    id: ObjectId,
+    partnerID : String,
+    name :String,
+    organization : String 
+})
+
+exports.Issuer = Issuer;
+exports.Customer = Customer;
+exports.Identity = Identity;
+exports.Partner = Partner; 

@@ -1,4 +1,5 @@
 {
     "mongoDatabaseUrl" : "",
-    "blockChainAPI" : ""
+    "blockChainAPIBase" : "http://tokenid-blockchain-api.herokuapp.com",
+    "blockChainAPIIssuer" : "/issuers"
 }
