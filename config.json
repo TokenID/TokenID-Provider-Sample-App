@@ -1,5 +1,6 @@
 {
-    "mongoDatabaseUrl" : "",
+    "mongoDatabaseUrl" : "mongodb://test_provider:Password12@ds139470.mlab.com:39470/tokenid_provider",
     "blockChainAPIBase" : "http://tokenid-blockchain-api.herokuapp.com",
-    "blockChainAPIIssuer" : "/issuers"
+    "blockChainAPIIssuer" : "issuers",
+    "blockChainAPIIdentity" :"identity"
 }

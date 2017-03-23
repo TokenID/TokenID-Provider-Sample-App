@@ -1,5 +1,7 @@
+const config  = require(__dirname +  "/../../configurations/config.js" ).config;
+
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect(config.mongoDatabaseUrl);
 
 let Schema = mongoose.Schema;
 let ObjectId = Schema.ObjectId;
@@ -25,6 +27,7 @@ let CustomerSchema = new Schema({
         publicKey: String,
         encryptedPrivateKey: String
     },
+    chainCodeID : String,
     mundane: {
         title: String,
         firstName: String,
@@ -65,7 +68,8 @@ let PartnerSchema = new Schema({
     id: ObjectId,
     partnerID : String,
     name :String,
-    organization : String 
+    organization : String,
+    email : String
 })
 
 exports.Issuer = mongoose.model("Issuer", IssuerSchema);

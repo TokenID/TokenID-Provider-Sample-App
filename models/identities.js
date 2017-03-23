@@ -6,8 +6,9 @@ let request = require("request");
 
 
 exports.createIssuer = function (req, res, next) {
-    let reqBody = req.body;
-    let requiredFields = ["enrollID", "issuerCode", "issuerName", "issuerOrganization", "identityTypeCodes"]
+
+    let requiredFields = ["identityCode", "identityTypeCode", "issuerCode",
+        "issuerID", "issuerOrganization", "identityPayload", "attachmentURI"]
     if (!reqBody) {
         res.status(400).json({ message: "Request body cannot be empty" });
         return;
@@ -15,41 +16,40 @@ exports.createIssuer = function (req, res, next) {
     let requiredField;
     requiredFields.forEach(function (val) {
         if (!reqBody[val]) {
-            requiredField  =  val;
+            requiredField = val;
         }
     })
-    if(requiredField)
-    {
+    if (requiredField) {
         res.status(400).json({ message: `'${requiredField}' is a required field` });
         return
     }
 
-    if (reqBody.identityTypeCodes.length == 0) {
-        res.status(400).json({ message: "At least one Identity Type Code needed " });
-        return;
-    }
+    //Find customer
+    schemaModels.Customer.find({ enrollmentID: req.param.enrollmentID }).select("enrollmentID chainCodeID").exec(function (err, customers) {
 
-    reqBody.issuerID = `ECB-${Date.now()}`;
-
-
-    request.post({ uri: `${config.blockChainAPI}/${config.blockChainAPIIssuer}`, json: reqBody }, function (err, response, body) {
         if (err) {
-            res.status(500).json({ message: "Error registering issuer to blockchain" });
             console.log(err);
-            return;
+            res.status(500).json({ message: ` Could not get customer  '${req.param.enrollmentID}' ` });
+            return
         }
-        let issuer = new schemaModels.Issuer(reqBody);
-        issuer.save(function (err, issuer) {
+        if (customers.length == 0) {
+            res.status(404).json({ message: ` Customer deosnt exist -  '${req.param.enrollmentID}' ` });
+            return
+        }
+        let customer = customers[0];
+        let reqBody = req.body;
+        var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.param.enrollmentID}`, json: reqBody, headers : { "X-CHAINCODE-ID" : customer.chainCodeID}};
+
+        request.post(options, function (err, response, body) {
             if (err) {
-                res.status(500).json({ message: "Error registering issuer to blockchain" });
+                res.status(500).json({ message: "Error adding  identity to blockchain" });
                 console.log(err);
                 return;
             }
-            res.json({ message: "Issuer succesfully enrolled", credentials: body })
 
-        })
+        });
+    })
 
-    });
 }
 
 
