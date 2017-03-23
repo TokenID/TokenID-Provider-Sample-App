@@ -1,9 +1,10 @@
 let mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
 
 let Schema = mongoose.Schema;
 let ObjectId = Schema.ObjectId;
 
-let Issuer = new Schema({
+let IssuerSchema = new Schema({
     id: ObjectId,
     issuerID: String,
     issuerName: String,
@@ -16,7 +17,7 @@ let Issuer = new Schema({
 });
 
 
-let Customer = new Schema({
+let CustomerSchema = new Schema({
     id: ObjectId,
     enrollmentID: String,
     enrollmentSecret: String,
@@ -42,7 +43,7 @@ let Customer = new Schema({
 
 })
 
-let Identity = new Schema({
+let IdentitySchema = new Schema({
     id: ObjectId,
     providerEnrollmentID : String,
     identityCode : String,
@@ -60,14 +61,14 @@ let Identity = new Schema({
     
 })
 
-let Partner = new Schema({
+let PartnerSchema = new Schema({
     id: ObjectId,
     partnerID : String,
     name :String,
     organization : String 
 })
 
-exports.Issuer = Issuer;
-exports.Customer = Customer;
-exports.Identity = Identity;
-exports.Partner = Partner; 
+exports.Issuer = mongoose.model("Issuer", IssuerSchema);
+exports.Customer = mongoose.model("Customer",CustomerSchema);
+exports.Identity = mongoose.model("Identity", IdentitySchema);
+exports.Partner = mongoose.model("Partner",  PartnerSchema); 
