@@ -5,7 +5,7 @@ let request = require("request");
 
 
 
-exports.createIssuer = function (req, res, next) {
+exports.createIdentity = function (req, res, next) {
 
     let requiredFields = ["identityCode", "identityTypeCode", "issuerCode",
         "issuerID", "issuerOrganization", "identityPayload", "attachmentURI"]
@@ -25,7 +25,7 @@ exports.createIssuer = function (req, res, next) {
     }
 
     //Find customer
-    schemaModels.Customer.find({ enrollmentID: req.param.enrollmentID }).select("enrollmentID chainCodeID").exec(function (err, customers) {
+    schemaModels.Customer.find({ enrollmentID: req.params.enrollmentID }).select("enrollmentID chainCodeID").exec(function (err, customers) {
 
         if (err) {
             console.log(err);
@@ -33,12 +33,12 @@ exports.createIssuer = function (req, res, next) {
             return
         }
         if (customers.length == 0) {
-            res.status(404).json({ message: ` Customer deosnt exist -  '${req.param.enrollmentID}' ` });
+            res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
             return
         }
         let customer = customers[0];
         let reqBody = req.body;
-        var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.param.enrollmentID}`, json: reqBody, headers : { "X-CHAINCODE-ID" : customer.chainCodeID}};
+        var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}`, json: reqBody, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
 
         request.post(options, function (err, response, body) {
             if (err) {
@@ -54,18 +54,29 @@ exports.createIssuer = function (req, res, next) {
 
 
 
-exports.getIssuers = function (req, res, next) {
-    schemaModels.Issuer.find().select("id issuerID issuerName issuerOrganization createdOn").exec(function (err, issuers) {
+exports.getIdentities = function (req, res, next) {
+    //Find customer
+    schemaModels.Customer.find({ enrollmentID: req.params.enrollmentID }).select("enrollmentID chainCodeID").exec(function (err, customers) {
+
         if (err) {
             console.log(err);
-            res.status(500).json({ message: "Failed to fetch issuers" });
+            res.status(500).json({ message: ` Could not get customer  '${req.params.enrollmentID}' ` });
+            return
         }
-        res.json(issuers)
+        request.get(`${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}`, function (err, response, body) {
+            
+                if (err) {
+                    console.log(err);
+                    res.status(500).json({ message: "Failed to fetch identities for  " + req.params.enrollmentID });
+                }
+                res.json(body);
+            
+        })
     });
 }
 
 
-exports.getIssuer = function (req, res, next) {
+exports.getIdentity = function (req, res, next) {
     schemaModels.Issuer.findOne().where("issuerID").equals(req.params.issuerID).exec(function (err, issuer) {
         if (err) {
             console.log(err);
