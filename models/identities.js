@@ -1,5 +1,6 @@
+
 const config = require(__dirname + "/../configurations/config.js").config;
-const schemaModels = require(__dirname + "/../schema/schema_models.js");
+const schemaModels = require(__dirname + "/schema/schema_models.js");
 
 let request = require("request");
 
@@ -18,7 +19,7 @@ exports.createIdentity = function (req, res, next) {
         if (!reqBody[val]) {
             requiredField = val;
         }
-    })
+    });
     if (requiredField) {
         res.status(400).json({ message: `'${requiredField}' is a required field` });
         return
