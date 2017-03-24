@@ -13,10 +13,11 @@
     "fs": "",
     "jade": "~1.11.0",
     "key-encoder": "1.1.6",
+    "keypair": "^1.0.1",
+    "ursa" : "0.9.4",
     "mongoose": "^4.9.1",
     "morgan": "~1.7.0",
     "pem": "1.9.4",
-    "ursa" : "",
     "request": "^2.79.0",
     "serve-favicon": "~2.3.2"
   },
