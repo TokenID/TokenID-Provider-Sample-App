@@ -1,6 +1,6 @@
 
 
-const config  = require(__dirname +  "/../../configurations/config.js" ).config;
+var config  = require(__dirname +  "/../../configurations/config.js" ).config;
 
 let mongoose = require('mongoose');
 mongoose.connect(config.mongoDatabaseUrl);

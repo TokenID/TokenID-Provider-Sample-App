@@ -1,7 +1,7 @@
 
 
-const config = require(__dirname + "/../configurations/config.js").config;
-const schemaModels = require(__dirname + "/schema/schema_models.js");
+var config = require(__dirname + "/../configurations/config.js").config;
+var schemaModels = require(__dirname + "/schema/schema_models.js");
 
 let request = require("request");
 
