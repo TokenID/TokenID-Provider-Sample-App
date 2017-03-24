@@ -12,6 +12,12 @@ router.get('/', function (req, res, next) {
     customers.getCustomers(req, res, next);
 });
 
+
+router.post('/', function (req, res, next) {
+    customers.createCustomer(req, res, next);
+})
+
+
 module.exports = router;
 
 
