@@ -29,7 +29,7 @@ exports.createIssuer = function (req, res, next) {
         return;
     }
 
-    reqBody.issuerID = `ECB-${Date.now()}`;
+    reqBody.issuerID = `ISS-${Date.now()}`;
 
 
     request.post({ uri: `${config.blockChainAPI}/${config.blockChainAPIIssuer}`, json: reqBody }, function (err, response, body) {

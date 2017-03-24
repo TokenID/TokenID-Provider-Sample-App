@@ -60,29 +60,56 @@ exports.getIdentities = function (req, res, next) {
 
         if (err) {
             console.log(err);
-            res.status(500).json({ message: ` Could not get customer  '${req.params.enrollmentID}' ` });
+            res.status(500).json({ message: ` Could not get customer  '${req.param.enrollmentID}' ` });
             return
         }
-        request.get(`${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}`, function (err, response, body) {
-            
-                if (err) {
-                    console.log(err);
-                    res.status(500).json({ message: "Failed to fetch identities for  " + req.params.enrollmentID });
-                }
-                res.json(body);
-            
+        if (customers.length == 0) {
+            res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
+            return
+        }
+        let customer = customers[0];
+        let reqBody = req.body;
+        var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}`, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
+
+        request.get(options, function (err, response, body) {
+
+            if (err) {
+                console.log(err);
+                res.status(500).json({ message: "Failed to fetch identities for  " + req.params.enrollmentID });
+            }
+            res.json(body);
+
         })
     });
 }
 
 
 exports.getIdentity = function (req, res, next) {
-    schemaModels.Issuer.findOne().where("issuerID").equals(req.params.issuerID).exec(function (err, issuer) {
+    //Find customer
+    schemaModels.Customer.find({ enrollmentID: req.params.enrollmentID }).select("enrollmentID chainCodeID").exec(function (err, customers) {
+
         if (err) {
             console.log(err);
-            res.status(500).json({ message: "Failed to fetch issuer " + req.params.issuerID });
+            res.status(500).json({ message: ` Could not get customer  '${req.param.enrollmentID}' ` });
+            return
         }
-        res.json(issuer);
+        if (customers.length == 0) {
+            res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
+            return
+        }
+        let customer = customers[0];
+        let reqBody = req.body;
+        var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}/${req.params.identityCode}`, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
+
+        request.get(options, function (err, response, body) {
+
+            if (err) {
+                console.log(err);
+                res.status(500).json({ message: "Failed to fetch identity for  " + req.params.identityCode });
+            }
+            res.json(body);
+
+        })
     })
 }
 

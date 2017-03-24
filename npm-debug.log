@@ -1,0 +1,693 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'ursa' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\package.json
+5 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\body-parser\package.json
+6 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\cookie-parser\package.json
+7 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\cors\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\debug\package.json
+9 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\express\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\fs\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\jade\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\key-encoder\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\mongoose\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\morgan\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\pem\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\request\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\serve-favicon\package.json
+18 info package.json cors@2.5.3 No license field.
+19 info package.json pem@1.9.4 No license field.
+20 info package.json fs@0.0.1-security fs is also the name of a node core module.
+21 verbose readDependencies loading dependencies from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\package.json
+22 silly cache add args [ 'ursa', null ]
+23 verbose cache add spec ursa
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'ursa',
+24 silly cache add   scope: null,
+24 silly cache add   name: 'ursa',
+24 silly cache add   rawSpec: '',
+24 silly cache add   spec: 'latest',
+24 silly cache add   type: 'tag' }
+25 silly addNamed ursa@latest
+26 verbose addNamed "latest" is being treated as a dist-tag for ursa
+27 info addNameTag [ 'ursa', 'latest' ]
+28 silly mapToRegistry name ursa
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry data Result {
+31 silly mapToRegistry   raw: 'ursa',
+31 silly mapToRegistry   scope: null,
+31 silly mapToRegistry   name: 'ursa',
+31 silly mapToRegistry   rawSpec: '',
+31 silly mapToRegistry   spec: 'latest',
+31 silly mapToRegistry   type: 'tag' }
+32 silly mapToRegistry uri https://registry.npmjs.org/ursa
+33 verbose addNameTag registry:https://registry.npmjs.org/ursa not in flight; fetching
+34 verbose request uri https://registry.npmjs.org/ursa
+35 verbose request no auth needed
+36 info attempt registry request try #1 at 8:08:17 AM
+37 verbose request id 85f2b6b4018570ee
+38 verbose etag W/"58a3e42f-d417"
+39 verbose lastModified Wed, 15 Feb 2017 05:16:31 GMT
+40 http request GET https://registry.npmjs.org/ursa
+41 http 304 https://registry.npmjs.org/ursa
+42 verbose headers { date: 'Fri, 24 Mar 2017 07:09:37 GMT',
+42 verbose headers   via: '1.1 varnish',
+42 verbose headers   'cache-control': 'max-age=300',
+42 verbose headers   etag: 'W/"58a3e42f-d417"',
+42 verbose headers   age: '163',
+42 verbose headers   connection: 'close',
+42 verbose headers   'x-served-by': 'cache-lhr6327-LHR',
+42 verbose headers   'x-cache': 'HIT',
+42 verbose headers   'x-cache-hits': '1',
+42 verbose headers   'x-timer': 'S1490339377.811650,VS0,VE0',
+42 verbose headers   vary: 'Accept-Encoding' }
+43 silly get cb [ 304,
+43 silly get   { date: 'Fri, 24 Mar 2017 07:09:37 GMT',
+43 silly get     via: '1.1 varnish',
+43 silly get     'cache-control': 'max-age=300',
+43 silly get     etag: 'W/"58a3e42f-d417"',
+43 silly get     age: '163',
+43 silly get     connection: 'close',
+43 silly get     'x-served-by': 'cache-lhr6327-LHR',
+43 silly get     'x-cache': 'HIT',
+43 silly get     'x-cache-hits': '1',
+43 silly get     'x-timer': 'S1490339377.811650,VS0,VE0',
+43 silly get     vary: 'Accept-Encoding' } ]
+44 verbose etag https://registry.npmjs.org/ursa from cache
+45 verbose get saving ursa to C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\registry.npmjs.org\ursa\.cache.json
+46 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+47 silly addNameTag next cb for ursa with tag latest
+48 silly addNamed ursa@0.9.4
+49 verbose addNamed "0.9.4" is a plain semver version for ursa
+50 silly cache afterAdd ursa@0.9.4
+51 verbose afterAdd C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\ursa\0.9.4\package\package.json not in flight; writing
+52 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+53 verbose afterAdd C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\ursa\0.9.4\package\package.json written
+54 silly install resolved [ { name: 'ursa',
+54 silly install resolved     version: '0.9.4',
+54 silly install resolved     keywords:
+54 silly install resolved      [ 'crypto',
+54 silly install resolved        'key',
+54 silly install resolved        'openssl',
+54 silly install resolved        'private',
+54 silly install resolved        'public',
+54 silly install resolved        'rsa',
+54 silly install resolved        'sign',
+54 silly install resolved        'signature',
+54 silly install resolved        'verify',
+54 silly install resolved        'verification',
+54 silly install resolved        'hash',
+54 silly install resolved        'digest' ],
+54 silly install resolved     description: 'RSA public/private key OpenSSL bindings for node and io.js',
+54 silly install resolved     homepage: 'https://github.com/quartzjer/ursa',
+54 silly install resolved     repository:
+54 silly install resolved      { type: 'git',
+54 silly install resolved        url: 'git+https://github.com/quartzjer/ursa.git' },
+54 silly install resolved     license: 'Apache-2.0',
+54 silly install resolved     author:
+54 silly install resolved      { name: 'Dan Bornstein',
+54 silly install resolved        email: 'danfuzz@milk.com',
+54 silly install resolved        url: 'http://www.milk.com/' },
+54 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+54 silly install resolved     main: 'lib/ursa.js',
+54 silly install resolved     engines: { node: '>=0.10.0' },
+54 silly install resolved     scripts: { test: 'node test/test.js', install: 'node-gyp rebuild' },
+54 silly install resolved     dependencies: { bindings: '^1.2.1', nan: '^2.3.3' },
+54 silly install resolved     gypfile: true,
+54 silly install resolved     gitHead: '216ad542b6722c560d24555b4ea0a76051654e6c',
+54 silly install resolved     bugs: { url: 'https://github.com/quartzjer/ursa/issues' },
+54 silly install resolved     _id: 'ursa@0.9.4',
+54 silly install resolved     _shasum: '0a2abfb7dc4267f733b0f8f2fc7f2c895d40a413',
+54 silly install resolved     _from: 'ursa@latest',
+54 silly install resolved     _npmVersion: '3.8.6',
+54 silly install resolved     _nodeVersion: '6.0.0',
+54 silly install resolved     _npmUser: { name: 'quartzjer', email: 'jeremie@jabber.org' },
+54 silly install resolved     dist:
+54 silly install resolved      { shasum: '0a2abfb7dc4267f733b0f8f2fc7f2c895d40a413',
+54 silly install resolved        tarball: 'https://registry.npmjs.org/ursa/-/ursa-0.9.4.tgz' },
+54 silly install resolved     _npmOperationalInternal:
+54 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+54 silly install resolved        tmp: 'tmp/ursa-0.9.4.tgz_1462840564075_0.891536823939532' },
+54 silly install resolved     directories: {},
+54 silly install resolved     _resolved: 'https://registry.npmjs.org/ursa/-/ursa-0.9.4.tgz',
+54 silly install resolved     readme: 'ERROR: No README data found!' } ]
+55 info install ursa@0.9.4 into C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample
+56 info installOne ursa@0.9.4
+57 verbose installOne of ursa to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample not in flight; installing
+58 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+59 verbose lock using C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks\ursa-89e4ece520f9fd4a.lock for C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+60 silly install write writing ursa 0.9.4 to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+61 verbose unbuild node_modules\ursa
+62 silly gentlyRm C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa is being purged from base C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample
+63 verbose gentlyRm don't care about contents; nuking C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+64 verbose tar unpack C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\ursa\0.9.4\package.tgz
+65 verbose tar unpacking to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+66 silly gentlyRm C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa is being purged
+67 verbose gentlyRm don't care about contents; nuking C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+68 silly gunzTarPerm modes [ '777', '666' ]
+69 silly gunzTarPerm extractEntry package.json
+70 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+71 silly gunzTarPerm extractEntry .npmignore
+72 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+73 silly gunzTarPerm extractEntry README.md
+74 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+75 silly gunzTarPerm extractEntry binding.gyp
+76 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+77 silly gunzTarPerm extractEntry .travis.yml
+78 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+79 silly gunzTarPerm extractEntry lib/ursa.js
+80 silly gunzTarPerm modified mode [ 'lib/ursa.js', 420, 438 ]
+81 silly gunzTarPerm extractEntry src/ursaNative.cc
+82 silly gunzTarPerm modified mode [ 'src/ursaNative.cc', 420, 438 ]
+83 silly gunzTarPerm extractEntry src/ursaNative.h
+84 silly gunzTarPerm modified mode [ 'src/ursaNative.h', 420, 438 ]
+85 silly gunzTarPerm extractEntry LICENSE.txt
+86 silly gunzTarPerm modified mode [ 'LICENSE.txt', 420, 438 ]
+87 silly gunzTarPerm extractEntry test/fixture.js
+88 silly gunzTarPerm modified mode [ 'test/fixture.js', 420, 438 ]
+89 silly gunzTarPerm extractEntry test/native.js
+90 silly gunzTarPerm modified mode [ 'test/native.js', 420, 438 ]
+91 silly gunzTarPerm extractEntry test/test.js
+92 silly gunzTarPerm modified mode [ 'test/test.js', 420, 438 ]
+93 silly gunzTarPerm extractEntry test/blort.pub
+94 silly gunzTarPerm modified mode [ 'test/blort.pub', 420, 438 ]
+95 silly gunzTarPerm extractEntry test/blort.sshpub
+96 silly gunzTarPerm modified mode [ 'test/blort.sshpub', 420, 438 ]
+97 silly gunzTarPerm extractEntry test/blort-pass.pem
+98 silly gunzTarPerm modified mode [ 'test/blort-pass.pem', 420, 438 ]
+99 silly gunzTarPerm extractEntry test/another_zorch.pem
+100 silly gunzTarPerm modified mode [ 'test/another_zorch.pem', 420, 438 ]
+101 silly gunzTarPerm extractEntry test/pss_tv.pub
+102 silly gunzTarPerm modified mode [ 'test/pss_tv.pub', 420, 438 ]
+103 silly gunzTarPerm extractEntry test/blort.pem
+104 silly gunzTarPerm modified mode [ 'test/blort.pem', 420, 438 ]
+105 silly gunzTarPerm extractEntry test/zorch.pem
+106 silly gunzTarPerm modified mode [ 'test/zorch.pem', 420, 438 ]
+107 silly gunzTarPerm extractEntry test/zorch.pub
+108 silly gunzTarPerm modified mode [ 'test/zorch.pub', 420, 438 ]
+109 verbose write writing to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\package.json
+110 info preinstall ursa@0.9.4
+111 verbose readDependencies loading dependencies from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\package.json
+112 silly prepareForInstallMany adding bindings@^1.2.1 from ursa dependencies
+113 silly prepareForInstallMany adding nan@^2.3.3 from ursa dependencies
+114 verbose readDependencies loading dependencies from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\package.json
+115 silly cache add args [ 'bindings@^1.2.1', null ]
+116 verbose cache add spec bindings@^1.2.1
+117 silly cache add args [ 'nan@^2.3.3', null ]
+118 verbose cache add spec nan@^2.3.3
+119 silly cache add parsed spec Result {
+119 silly cache add   raw: 'bindings@^1.2.1',
+119 silly cache add   scope: null,
+119 silly cache add   name: 'bindings',
+119 silly cache add   rawSpec: '^1.2.1',
+119 silly cache add   spec: '>=1.2.1 <2.0.0',
+119 silly cache add   type: 'range' }
+120 silly addNamed bindings@>=1.2.1 <2.0.0
+121 verbose addNamed ">=1.2.1 <2.0.0" is a valid semver range for bindings
+122 silly addNameRange { name: 'bindings', range: '>=1.2.1 <2.0.0', hasData: false }
+123 silly mapToRegistry name bindings
+124 silly mapToRegistry using default registry
+125 silly mapToRegistry registry https://registry.npmjs.org/
+126 silly mapToRegistry data Result {
+126 silly mapToRegistry   raw: 'bindings',
+126 silly mapToRegistry   scope: null,
+126 silly mapToRegistry   name: 'bindings',
+126 silly mapToRegistry   rawSpec: '',
+126 silly mapToRegistry   spec: 'latest',
+126 silly mapToRegistry   type: 'tag' }
+127 silly mapToRegistry uri https://registry.npmjs.org/bindings
+128 verbose addNameRange registry:https://registry.npmjs.org/bindings not in flight; fetching
+129 silly cache add parsed spec Result {
+129 silly cache add   raw: 'nan@^2.3.3',
+129 silly cache add   scope: null,
+129 silly cache add   name: 'nan',
+129 silly cache add   rawSpec: '^2.3.3',
+129 silly cache add   spec: '>=2.3.3 <3.0.0',
+129 silly cache add   type: 'range' }
+130 silly addNamed nan@>=2.3.3 <3.0.0
+131 verbose addNamed ">=2.3.3 <3.0.0" is a valid semver range for nan
+132 silly addNameRange { name: 'nan', range: '>=2.3.3 <3.0.0', hasData: false }
+133 silly mapToRegistry name nan
+134 silly mapToRegistry using default registry
+135 silly mapToRegistry registry https://registry.npmjs.org/
+136 silly mapToRegistry data Result {
+136 silly mapToRegistry   raw: 'nan',
+136 silly mapToRegistry   scope: null,
+136 silly mapToRegistry   name: 'nan',
+136 silly mapToRegistry   rawSpec: '',
+136 silly mapToRegistry   spec: 'latest',
+136 silly mapToRegistry   type: 'tag' }
+137 silly mapToRegistry uri https://registry.npmjs.org/nan
+138 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+139 verbose request uri https://registry.npmjs.org/nan
+140 verbose request no auth needed
+141 info attempt registry request try #1 at 8:08:22 AM
+142 verbose etag W/"58cbd34a-1df6f"
+143 verbose lastModified Fri, 17 Mar 2017 12:15:06 GMT
+144 http request GET https://registry.npmjs.org/nan
+145 verbose request uri https://registry.npmjs.org/bindings
+146 verbose request no auth needed
+147 info attempt registry request try #1 at 8:08:22 AM
+148 verbose etag W/"580645d3-46f7"
+149 verbose lastModified Tue, 18 Oct 2016 15:54:59 GMT
+150 http request GET https://registry.npmjs.org/bindings
+151 http 200 https://registry.npmjs.org/nan
+152 verbose headers { server: 'nginx/1.10.1',
+152 verbose headers   'content-type': 'application/json',
+152 verbose headers   'last-modified': 'Wed, 22 Mar 2017 11:28:07 GMT',
+152 verbose headers   etag: 'W/"58d25fc7-1df7e"',
+152 verbose headers   'content-encoding': 'gzip',
+152 verbose headers   'cache-control': 'max-age=300',
+152 verbose headers   'content-length': '14443',
+152 verbose headers   'accept-ranges': 'bytes',
+152 verbose headers   date: 'Fri, 24 Mar 2017 07:09:40 GMT',
+152 verbose headers   via: '1.1 varnish',
+152 verbose headers   age: '185',
+152 verbose headers   connection: 'close',
+152 verbose headers   'x-served-by': 'cache-lhr6323-LHR',
+152 verbose headers   'x-cache': 'HIT',
+152 verbose headers   'x-cache-hits': '3',
+152 verbose headers   'x-timer': 'S1490339380.557395,VS0,VE0',
+152 verbose headers   vary: 'Accept-Encoding' }
+153 silly get cb [ 200,
+153 silly get   { server: 'nginx/1.10.1',
+153 silly get     'content-type': 'application/json',
+153 silly get     'last-modified': 'Wed, 22 Mar 2017 11:28:07 GMT',
+153 silly get     etag: 'W/"58d25fc7-1df7e"',
+153 silly get     'content-encoding': 'gzip',
+153 silly get     'cache-control': 'max-age=300',
+153 silly get     'content-length': '14443',
+153 silly get     'accept-ranges': 'bytes',
+153 silly get     date: 'Fri, 24 Mar 2017 07:09:40 GMT',
+153 silly get     via: '1.1 varnish',
+153 silly get     age: '185',
+153 silly get     connection: 'close',
+153 silly get     'x-served-by': 'cache-lhr6323-LHR',
+153 silly get     'x-cache': 'HIT',
+153 silly get     'x-cache-hits': '3',
+153 silly get     'x-timer': 'S1490339380.557395,VS0,VE0',
+153 silly get     vary: 'Accept-Encoding' } ]
+154 verbose get saving nan to C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+155 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+156 http 304 https://registry.npmjs.org/bindings
+157 verbose headers { date: 'Fri, 24 Mar 2017 07:09:40 GMT',
+157 verbose headers   via: '1.1 varnish',
+157 verbose headers   'cache-control': 'max-age=300',
+157 verbose headers   etag: 'W/"580645d3-46f7"',
+157 verbose headers   age: '11',
+157 verbose headers   connection: 'close',
+157 verbose headers   'x-served-by': 'cache-lhr6335-LHR',
+157 verbose headers   'x-cache': 'HIT',
+157 verbose headers   'x-cache-hits': '1',
+157 verbose headers   'x-timer': 'S1490339380.627831,VS0,VE0',
+157 verbose headers   vary: 'Accept-Encoding' }
+158 silly get cb [ 304,
+158 silly get   { date: 'Fri, 24 Mar 2017 07:09:40 GMT',
+158 silly get     via: '1.1 varnish',
+158 silly get     'cache-control': 'max-age=300',
+158 silly get     etag: 'W/"580645d3-46f7"',
+158 silly get     age: '11',
+158 silly get     connection: 'close',
+158 silly get     'x-served-by': 'cache-lhr6335-LHR',
+158 silly get     'x-cache': 'HIT',
+158 silly get     'x-cache-hits': '1',
+158 silly get     'x-timer': 'S1490339380.627831,VS0,VE0',
+158 silly get     vary: 'Accept-Encoding' } ]
+159 verbose etag https://registry.npmjs.org/bindings from cache
+160 verbose get saving bindings to C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
+161 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+162 silly addNameRange number 2 { name: 'nan', range: '>=2.3.3 <3.0.0', hasData: true }
+163 silly addNameRange versions [ 'nan',
+163 silly addNameRange   [ '0.3.0-wip',
+163 silly addNameRange     '0.3.0-wip2',
+163 silly addNameRange     '0.3.0',
+163 silly addNameRange     '0.3.1',
+163 silly addNameRange     '0.3.2',
+163 silly addNameRange     '0.4.0',
+163 silly addNameRange     '0.4.1',
+163 silly addNameRange     '0.4.2',
+163 silly addNameRange     '0.4.3',
+163 silly addNameRange     '0.4.4',
+163 silly addNameRange     '0.5.0',
+163 silly addNameRange     '0.5.1',
+163 silly addNameRange     '0.5.2',
+163 silly addNameRange     '0.6.0',
+163 silly addNameRange     '0.7.0',
+163 silly addNameRange     '0.7.1',
+163 silly addNameRange     '0.8.0',
+163 silly addNameRange     '1.0.0',
+163 silly addNameRange     '1.1.0',
+163 silly addNameRange     '1.1.1',
+163 silly addNameRange     '1.1.2',
+163 silly addNameRange     '1.2.0',
+163 silly addNameRange     '1.3.0',
+163 silly addNameRange     '1.4.0',
+163 silly addNameRange     '1.4.1',
+163 silly addNameRange     '1.5.0',
+163 silly addNameRange     '1.4.2',
+163 silly addNameRange     '1.4.3',
+163 silly addNameRange     '1.5.1',
+163 silly addNameRange     '1.5.2',
+163 silly addNameRange     '1.6.0',
+163 silly addNameRange     '1.5.3',
+163 silly addNameRange     '1.6.1',
+163 silly addNameRange     '1.6.2',
+163 silly addNameRange     '1.7.0',
+163 silly addNameRange     '1.8.0',
+163 silly addNameRange     '1.8.1',
+163 silly addNameRange     '1.8.2',
+163 silly addNameRange     '1.8.3',
+163 silly addNameRange     '1.8.4',
+163 silly addNameRange     '1.9.0',
+163 silly addNameRange     '2.0.0',
+163 silly addNameRange     '2.0.1',
+163 silly addNameRange     '2.0.2',
+163 silly addNameRange     '2.0.3',
+163 silly addNameRange     '2.0.4',
+163 silly addNameRange     '2.0.5',
+163 silly addNameRange     '2.0.6',
+163 silly addNameRange     '2.0.7',
+163 silly addNameRange     '2.0.8',
+163 silly addNameRange     '2.0.9',
+163 silly addNameRange     '2.1.0',
+163 silly addNameRange     '2.2.0',
+163 silly addNameRange     '2.2.1',
+163 silly addNameRange     '2.3.0',
+163 silly addNameRange     '2.3.1',
+163 silly addNameRange     '2.3.2',
+163 silly addNameRange     '2.3.3',
+163 silly addNameRange     '2.3.4',
+163 silly addNameRange     '2.3.5',
+163 silly addNameRange     '2.4.0',
+163 silly addNameRange     '2.5.0',
+163 silly addNameRange     '2.5.1' ] ]
+164 silly addNamed nan@2.5.1
+165 verbose addNamed "2.5.1" is a plain semver version for nan
+166 silly addNameRange number 2 { name: 'bindings', range: '>=1.2.1 <2.0.0', hasData: true }
+167 silly addNameRange versions [ 'bindings',
+167 silly addNameRange   [ '0.0.1',
+167 silly addNameRange     '0.1.0',
+167 silly addNameRange     '0.1.1',
+167 silly addNameRange     '0.2.0',
+167 silly addNameRange     '0.2.1',
+167 silly addNameRange     '0.2.2',
+167 silly addNameRange     '0.2.3',
+167 silly addNameRange     '0.2.4',
+167 silly addNameRange     '0.3.0',
+167 silly addNameRange     '0.4.0',
+167 silly addNameRange     '1.0.0',
+167 silly addNameRange     '1.1.0',
+167 silly addNameRange     '1.1.1',
+167 silly addNameRange     '1.2.0',
+167 silly addNameRange     '1.2.1' ] ]
+168 silly addNamed bindings@1.2.1
+169 verbose addNamed "1.2.1" is a plain semver version for bindings
+170 silly cache afterAdd bindings@1.2.1
+171 verbose afterAdd C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json not in flight; writing
+172 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+173 silly cache afterAdd nan@2.5.1
+174 verbose afterAdd C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\nan\2.5.1\package\package.json not in flight; writing
+175 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+176 verbose afterAdd C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json written
+177 verbose afterAdd C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\nan\2.5.1\package\package.json written
+178 silly install resolved [ { name: 'bindings',
+178 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+178 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+178 silly install resolved     version: '1.2.1',
+178 silly install resolved     author:
+178 silly install resolved      { name: 'Nathan Rajlich',
+178 silly install resolved        email: 'nathan@tootallnate.net',
+178 silly install resolved        url: 'http://tootallnate.net' },
+178 silly install resolved     repository:
+178 silly install resolved      { type: 'git',
+178 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+178 silly install resolved     main: './bindings.js',
+178 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+178 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+178 silly install resolved     license: 'MIT',
+178 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
+178 silly install resolved     _id: 'bindings@1.2.1',
+178 silly install resolved     scripts: {},
+178 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+178 silly install resolved     _from: 'bindings@>=1.2.1 <2.0.0',
+178 silly install resolved     _npmVersion: '1.4.14',
+178 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+178 silly install resolved     maintainers: [ [Object], [Object] ],
+178 silly install resolved     dist:
+178 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+178 silly install resolved        tarball: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+178 silly install resolved     directories: {},
+178 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
+178 silly install resolved     readme: 'ERROR: No README data found!' },
+178 silly install resolved   { name: 'nan',
+178 silly install resolved     version: '2.5.1',
+178 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 7 compatibility',
+178 silly install resolved     main: 'include_dirs.js',
+178 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+178 silly install resolved     scripts:
+178 silly install resolved      { test: 'tap --gc --stderr test/js/*-test.js',
+178 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+178 silly install resolved        docs: 'doc/.build.sh' },
+178 silly install resolved     contributors:
+178 silly install resolved      [ [Object],
+178 silly install resolved        [Object],
+178 silly install resolved        [Object],
+178 silly install resolved        [Object],
+178 silly install resolved        [Object],
+178 silly install resolved        [Object],
+178 silly install resolved        [Object] ],
+178 silly install resolved     devDependencies:
+178 silly install resolved      { bindings: '~1.2.1',
+178 silly install resolved        commander: '^2.8.1',
+178 silly install resolved        glob: '^5.0.14',
+178 silly install resolved        'node-gyp': '~3.0.1',
+178 silly install resolved        'readable-stream': '^2.1.4',
+178 silly install resolved        tap: '~0.7.1',
+178 silly install resolved        xtend: '~4.0.0' },
+178 silly install resolved     license: 'MIT',
+178 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+178 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+178 silly install resolved     _id: 'nan@2.5.1',
+178 silly install resolved     _shasum: 'd5b01691253326a97a2bbee9e61c55d8d60351e2',
+178 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.5.1.tgz',
+178 silly install resolved     _from: 'nan@>=2.3.3 <3.0.0',
+178 silly install resolved     _npmVersion: '4.0.5',
+178 silly install resolved     _nodeVersion: '7.4.0',
+178 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+178 silly install resolved     dist:
+178 silly install resolved      { shasum: 'd5b01691253326a97a2bbee9e61c55d8d60351e2',
+178 silly install resolved        tarball: 'https://registry.npmjs.org/nan/-/nan-2.5.1.tgz' },
+178 silly install resolved     maintainers: [ [Object], [Object] ],
+178 silly install resolved     _npmOperationalInternal:
+178 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
+178 silly install resolved        tmp: 'tmp/nan-2.5.1.tgz_1485124061146_0.7941144248470664' },
+178 silly install resolved     directories: {},
+178 silly install resolved     readme: 'ERROR: No README data found!' } ]
+179 info install bindings@1.2.1 into C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+180 info install nan@2.5.1 into C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+181 info installOne bindings@1.2.1
+182 verbose installOne of bindings to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa not in flight; installing
+183 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+184 info installOne nan@2.5.1
+185 verbose installOne of nan to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa not in flight; installing
+186 verbose correctMkdir C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+187 verbose lock using C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks\bindings-9c3fa5d36fae4a26.lock for C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+188 verbose lock using C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks\nan-3a4b73eb11496b8f.lock for C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+189 silly install write writing bindings 1.2.1 to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+190 silly install write writing nan 2.5.1 to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+191 verbose unbuild node_modules\ursa\node_modules\nan
+192 verbose unbuild node_modules\ursa\node_modules\bindings
+193 silly gentlyRm C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan is being purged from base C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample
+194 verbose gentlyRm don't care about contents; nuking C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+195 verbose tar unpack C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\nan\2.5.1\package.tgz
+196 verbose tar unpacking to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+197 silly gentlyRm C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan is being purged
+198 verbose gentlyRm don't care about contents; nuking C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+199 silly gentlyRm C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings is being purged from base C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample
+200 verbose gentlyRm don't care about contents; nuking C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+201 silly gunzTarPerm modes [ '777', '666' ]
+202 verbose tar unpack C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+203 verbose tar unpacking to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+204 silly gentlyRm C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings is being purged
+205 verbose gentlyRm don't care about contents; nuking C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+206 silly gunzTarPerm modes [ '777', '666' ]
+207 silly gunzTarPerm extractEntry package.json
+208 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+209 silly gunzTarPerm extractEntry README.md
+210 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+211 silly gunzTarPerm extractEntry bindings.js
+212 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
+213 silly gunzTarPerm extractEntry package.json
+214 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+215 silly gunzTarPerm extractEntry README.md
+216 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+217 silly gunzTarPerm extractEntry include_dirs.js
+218 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+219 verbose write writing to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings\package.json
+220 silly gunzTarPerm extractEntry nan_converters.h
+221 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+222 silly gunzTarPerm extractEntry CHANGELOG.md
+223 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+224 silly gunzTarPerm extractEntry LICENSE.md
+225 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+226 info preinstall bindings@1.2.1
+227 silly gunzTarPerm extractEntry doc/node_misc.md
+228 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+229 verbose readDependencies loading dependencies from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings\package.json
+230 verbose readDependencies loading dependencies from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings\package.json
+231 silly gunzTarPerm extractEntry doc/asyncworker.md
+232 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
+233 silly gunzTarPerm extractEntry doc/callback.md
+234 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+235 silly install resolved []
+236 verbose about to build C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+237 info build C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+238 silly gunzTarPerm extractEntry doc/converters.md
+239 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+240 silly gunzTarPerm extractEntry doc/errors.md
+241 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+242 info linkStuff bindings@1.2.1
+243 silly linkStuff bindings@1.2.1 has C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules as its parent node_modules
+244 silly gunzTarPerm extractEntry doc/maybe_types.md
+245 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+246 silly gunzTarPerm extractEntry doc/methods.md
+247 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+248 silly gunzTarPerm extractEntry doc/new.md
+249 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+250 verbose linkBins bindings@1.2.1
+251 verbose linkMans bindings@1.2.1
+252 verbose rebuildBundles bindings@1.2.1
+253 info install bindings@1.2.1
+254 info postinstall bindings@1.2.1
+255 verbose unlock done using C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks\bindings-9c3fa5d36fae4a26.lock for C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\bindings
+256 silly gunzTarPerm extractEntry doc/buffers.md
+257 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+258 silly gunzTarPerm extractEntry doc/object_wrappers.md
+259 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 438 ]
+260 silly gunzTarPerm extractEntry doc/persistent.md
+261 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+262 silly gunzTarPerm extractEntry doc/scopes.md
+263 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+264 silly gunzTarPerm extractEntry doc/script.md
+265 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
+266 silly gunzTarPerm extractEntry doc/string_bytes.md
+267 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 438 ]
+268 silly gunzTarPerm extractEntry doc/v8_internals.md
+269 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 438 ]
+270 silly gunzTarPerm extractEntry doc/v8_misc.md
+271 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+272 silly gunzTarPerm extractEntry nan.h
+273 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+274 silly gunzTarPerm extractEntry nan_callbacks.h
+275 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
+276 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+277 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+278 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+279 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+280 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+281 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+282 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+283 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+284 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+285 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+286 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+287 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+288 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+289 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
+290 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+291 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
+292 silly gunzTarPerm extractEntry nan_new.h
+293 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+294 silly gunzTarPerm extractEntry nan_object_wrap.h
+295 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+296 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+297 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+298 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+299 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+300 silly gunzTarPerm extractEntry nan_private.h
+301 silly gunzTarPerm modified mode [ 'nan_private.h', 436, 438 ]
+302 silly gunzTarPerm extractEntry nan_string_bytes.h
+303 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+304 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+305 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 438 ]
+306 silly gunzTarPerm extractEntry nan_weak.h
+307 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+308 silly gunzTarPerm extractEntry tools/package.json
+309 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+310 silly gunzTarPerm extractEntry tools/README.md
+311 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+312 silly gunzTarPerm extractEntry tools/1to2.js
+313 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
+314 verbose write writing to C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan\package.json
+315 info preinstall nan@2.5.1
+316 verbose readDependencies loading dependencies from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan\package.json
+317 verbose readDependencies loading dependencies from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan\package.json
+318 silly install resolved []
+319 verbose about to build C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+320 info build C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+321 info linkStuff nan@2.5.1
+322 silly linkStuff nan@2.5.1 has C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules as its parent node_modules
+323 verbose linkBins nan@2.5.1
+324 verbose linkMans nan@2.5.1
+325 verbose rebuildBundles nan@2.5.1
+326 info install nan@2.5.1
+327 info postinstall nan@2.5.1
+328 verbose unlock done using C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks\nan-3a4b73eb11496b8f.lock for C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa\node_modules\nan
+329 verbose about to build C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+330 info build C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+331 info linkStuff ursa@0.9.4
+332 silly linkStuff ursa@0.9.4 has C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules as its parent node_modules
+333 verbose linkBins ursa@0.9.4
+334 verbose linkMans ursa@0.9.4
+335 verbose rebuildBundles ursa@0.9.4
+336 verbose rebuildBundles [ 'bindings', 'nan' ]
+337 info install ursa@0.9.4
+338 verbose unsafe-perm in lifecycle true
+339 info ursa@0.9.4 Failed to exec install script
+340 verbose unlock done using C:\Users\Victor.ikoro\AppData\Roaming\npm-cache\_locks\ursa-89e4ece520f9fd4a.lock for C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+341 verbose stack Error: ursa@0.9.4 install: `node-gyp rebuild`
+341 verbose stack Exit status 1
+341 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+341 verbose stack     at emitTwo (events.js:87:13)
+341 verbose stack     at EventEmitter.emit (events.js:172:7)
+341 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+341 verbose stack     at emitTwo (events.js:87:13)
+341 verbose stack     at ChildProcess.emit (events.js:172:7)
+341 verbose stack     at maybeClose (internal/child_process.js:827:16)
+341 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+342 verbose pkgid ursa@0.9.4
+343 verbose cwd C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample
+344 error Windows_NT 6.3.9600
+345 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "ursa"
+346 error node v4.4.3
+347 error npm  v2.15.1
+348 error code ELIFECYCLE
+349 error ursa@0.9.4 install: `node-gyp rebuild`
+349 error Exit status 1
+350 error Failed at the ursa@0.9.4 install script 'node-gyp rebuild'.
+350 error This is most likely a problem with the ursa package,
+350 error not with npm itself.
+350 error Tell the author that this fails on your system:
+350 error     node-gyp rebuild
+350 error You can get information on how to open an issue for this project with:
+350 error     npm bugs ursa
+350 error Or if that isn't available, you can get their info via:
+350 error
+350 error     npm owner ls ursa
+350 error There is likely additional logging output above.
+351 verbose exit [ 1, true ]
+352 verbose unbuild node_modules\ursa
+353 info preuninstall ursa@0.9.4
+354 info uninstall ursa@0.9.4
+355 verbose unbuild rmStuff ursa@0.9.4 from C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules
+356 info postuninstall ursa@0.9.4
+357 silly gentlyRm C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa is being purged from base C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample
+358 verbose gentlyRm don't care about contents; nuking C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+359 silly vacuum-fs purging C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules\ursa
+360 silly vacuum-fs quitting because other entries in C:\Users\Victor.ikoro\Documents\VSCodeProjects\tokenid-provider-sample\node_modules
