@@ -2,19 +2,19 @@
 var config = require(__dirname + "/../configurations/config.js").config;
 var schemaModels = require(__dirname + "/schema/schema_models.js");
 
-let request = require("request");
+var request = require("request");
 
 
 
 exports.createIdentity = function (req, res, next) {
 
-    let requiredFields = ["identityCode", "identityTypeCode", "issuerCode",
+    var requiredFields = ["identityCode", "identityTypeCode", "issuerCode",
         "issuerID", "issuerOrganization", "identityPayload", "attachmentURI"]
     if (!reqBody) {
         res.status(400).json({ message: "Request body cannot be empty" });
         return;
     }
-    let requiredField;
+    var requiredField;
     requiredFields.forEach(function (val) {
         if (!reqBody[val]) {
             requiredField = val;
@@ -37,8 +37,8 @@ exports.createIdentity = function (req, res, next) {
             res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
             return
         }
-        let customer = customers[0];
-        let reqBody = req.body;
+        var customer = customers[0];
+        var reqBody = req.body;
         var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}`, json: reqBody, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
 
         request.post(options, function (err, response, body) {
@@ -68,8 +68,8 @@ exports.getIdentities = function (req, res, next) {
             res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
             return
         }
-        let customer = customers[0];
-        let reqBody = req.body;
+        var customer = customers[0];
+        var reqBody = req.body;
         var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}`, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
 
         request.get(options, function (err, response, body) {
@@ -98,8 +98,8 @@ exports.getIdentity = function (req, res, next) {
             res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
             return
         }
-        let customer = customers[0];
-        let reqBody = req.body;
+        var customer = customers[0];
+        var reqBody = req.body;
         var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}/${req.params.identityCode}`, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
 
         request.get(options, function (err, response, body) {
@@ -129,8 +129,8 @@ exports.removeIdentity = function (req, res, next) {
             res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
             return
         }
-        let customer = customers[0];
-        let reqBody = req.body;
+        var customer = customers[0];
+        var reqBody = req.body;
         var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}/${req.params.identityCode}`, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
 
         request.delete(options, function (err, response, body) {

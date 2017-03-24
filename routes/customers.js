@@ -1,7 +1,7 @@
 
-let express = require('express');
-let router = express.Router();
-let customers = require('../models/customers.js');
+var express = require('express');
+var router = express.Router();
+var customers = require('../models/customers.js');
 
 
 router.get('/:enrollmentID', function (req, res, next) {

@@ -2,7 +2,7 @@
 var fs = require("fs");
 
 
-let config = {};
+var config = {};
 
 try{
 config = JSON.parse(fs.readFileSync(__dirname + "/../config.json"));

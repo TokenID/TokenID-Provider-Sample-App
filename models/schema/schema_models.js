@@ -2,13 +2,13 @@
 
 var config  = require(__dirname +  "/../../configurations/config.js" ).config;
 
-let mongoose = require('mongoose');
+var mongoose = require('mongoose');
 mongoose.connect(config.mongoDatabaseUrl);
 
-let Schema = mongoose.Schema;
-let ObjectId = Schema.ObjectId;
+var Schema = mongoose.Schema;
+var ObjectId = Schema.ObjectId;
 
-let IssuerSchema = new Schema({
+var IssuerSchema = new Schema({
     id: ObjectId,
     issuerID: String,
     issuerName: String,
@@ -21,7 +21,7 @@ let IssuerSchema = new Schema({
 });
 
 
-let CustomerSchema = new Schema({
+var CustomerSchema = new Schema({
     id: ObjectId,
     enrollmentID: String,
     enrollmentSecret: String,
@@ -48,7 +48,7 @@ let CustomerSchema = new Schema({
 
 })
 
-let IdentitySchema = new Schema({
+var IdentitySchema = new Schema({
     id: ObjectId,
     providerEnrollmentID : String,
     identityCode : String,
@@ -66,7 +66,7 @@ let IdentitySchema = new Schema({
     
 })
 
-let PartnerSchema = new Schema({
+var PartnerSchema = new Schema({
     id: ObjectId,
     partnerID : String,
     name :String,

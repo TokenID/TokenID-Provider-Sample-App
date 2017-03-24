@@ -1,7 +1,7 @@
 
-let express = require('express');
-let router = express.Router();
-let issuers = require('../models/issuers.js');
+var express = require('express');
+var router = express.Router();
+var issuers = require('../models/issuers.js');
 
 
 router.get('/', function (req, res, next) {

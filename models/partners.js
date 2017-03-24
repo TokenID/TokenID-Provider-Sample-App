@@ -3,18 +3,18 @@
 var config = require(__dirname + "/../configurations/config.js").config;
 var schemaModels = require(__dirname + "/schema/schema_models.js");
 
-let request = require("request");
+var request = require("request");
 
 
 
 exports.createPartner = function (req, res, next) {
-    let reqBody = req.body;
-    let requiredFields = ["name", "organization", "email", "webHookUrl"]
+    var reqBody = req.body;
+    var requiredFields = ["name", "organization", "email", "webHookUrl"]
     if (!reqBody) {
         res.status(400).json({ message: "Request body cannot be empty" });
         return;
     }
-    let requiredField;
+    var requiredField;
     requiredFields.forEach(function (val) {
         if (!reqBody[val]) {
             requiredField = val;
@@ -27,7 +27,7 @@ exports.createPartner = function (req, res, next) {
 
     reqBody.partnerID = `PAR-${Date.now()}`;
 
-    let partner = new schemaModels.Partner(reqBody);
+    var partner = new schemaModels.Partner(reqBody);
     issuer.save(function (err, partner) {
         if (err) {
             res.status(500).json({ message: "Error registering relyinh partner" });

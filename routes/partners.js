@@ -1,7 +1,7 @@
 
-let express = require('express');
-let router = express.Router();
-let partners = require('../models/partners.js');
+var express = require('express');
+var router = express.Router();
+var partners = require('../models/partners.js');
 
 
 router.get('/:partnerID', function (req, res, next) {

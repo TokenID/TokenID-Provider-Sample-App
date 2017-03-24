@@ -1,7 +1,7 @@
 
-let express = require('express');
-let router = express.Router();
-let identities = require('../models/identities.js');
+var express = require('express');
+var router = express.Router();
+var identities = require('../models/identities.js');
 
 
 //Get Identities
@@ -22,7 +22,6 @@ router.get('/:enrollmentID/:identityCode', function (req, res, next) {
 router.delete('/:enrollmentID/:identityCode', function (req, res, next) {
     identities.removeIdentity(req, res, next);
 });
-
 
 module.exports = router;
 
