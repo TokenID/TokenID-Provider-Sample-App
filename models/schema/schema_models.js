@@ -69,7 +69,8 @@ let PartnerSchema = new Schema({
     partnerID : String,
     name :String,
     organization : String,
-    email : String
+    email : String,
+    webHookUrl:String
 })
 
 exports.Issuer = mongoose.model("Issuer", IssuerSchema);

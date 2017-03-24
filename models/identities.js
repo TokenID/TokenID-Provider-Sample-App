@@ -111,6 +111,37 @@ exports.getIdentity = function (req, res, next) {
 
         })
     })
+
 }
+
+
+exports.removeIdentity = function (req, res, next) {
+    //Find customer
+    schemaModels.Customer.find({ enrollmentID: req.params.enrollmentID }).select("enrollmentID chainCodeID").exec(function (err, customers) {
+
+        if (err) {
+            console.log(err);
+            res.status(500).json({ message: ` Could not get customer  '${req.param.enrollmentID}' ` });
+            return
+        }
+        if (customers.length == 0) {
+            res.status(404).json({ message: ` Customer doesn't exist -  '${req.param.enrollmentID}' ` });
+            return
+        }
+        let customer = customers[0];
+        let reqBody = req.body;
+        var options = { uri: `${config.blockChainAPI}/${config.blockChainAPIIdentity}/${req.params.enrollmentID}/${req.params.identityCode}`, headers: { "X-CHAINCODE-ID": customer.chainCodeID } };
+
+        request.delete(options, function (err, response, body) {
+
+            if (err) {
+                console.log(err);
+                res.status(500).json({ message: "Failed to delete identity for  " + req.params.identityCode });
+            }
+
+            res.json({message : "Successfully deleted identity"});
+
+        })
+    })
 
 
