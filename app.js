@@ -32,7 +32,7 @@ app.use('/users', users);
 app.use('/issuers', issuers);
 app.use('/identities', identities);
 app.use('/customers', customers);
-app.use('/partners', cupartnersstomers);
+app.use('/partners', partners);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

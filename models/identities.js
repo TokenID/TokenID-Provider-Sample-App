@@ -9,7 +9,7 @@ var request = require("request");
 exports.createIdentity = function (req, res, next) {
 
     var requiredFields = ["identityCode", "identityTypeCode", "issuerCode",
-        "issuerID", "issuerOrganization", "identityPayload", "attachmentURI"]
+        "issuerID", "issuerOrganization", "identityPayload", "attachmentURI"];
     if (!reqBody) {
         res.status(400).json({ message: "Request body cannot be empty" });
         return;
@@ -144,5 +144,6 @@ exports.removeIdentity = function (req, res, next) {
 
         })
     })
+}
 
 
