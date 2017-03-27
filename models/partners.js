@@ -28,7 +28,7 @@ exports.createPartner = function (req, res, next) {
     reqBody.partnerID = `PAR-${Date.now()}`;
 
     var partner = new schemaModels.Partner(reqBody);
-    issuer.save(function (err, partner) {
+    partner.save(function (err, partner) {
         if (err) {
             res.status(500).json({ message: "Error registering relyinh partner" });
             console.log(err);
