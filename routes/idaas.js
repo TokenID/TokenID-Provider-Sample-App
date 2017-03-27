@@ -35,9 +35,8 @@ exports.validateCredentials = function (req, res, next) {
         res.json({ message: "Successfully Logged In" });
     });
 
-    
+
 
 }
 
-exports.
 
