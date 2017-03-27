@@ -30,7 +30,7 @@ exports.createPartner = function (req, res, next) {
     var partner = new schemaModels.Partner(reqBody);
     partner.save(function (err, partner) {
         if (err) {
-            res.status(500).json({ message: "Error registering relyinh partner" });
+            res.status(500).json({ message: "Error registering relying partner" });
             console.log(err);
             return;
         }
