@@ -144,5 +144,6 @@ exports.removeIdentity = function (req, res, next) {
 
         })
     })
+}
 
 
