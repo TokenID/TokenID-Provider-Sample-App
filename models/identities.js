@@ -10,6 +10,7 @@ exports.createIdentity = function (req, res, next) {
 
     var requiredFields = ["identityCode", "identityTypeCode", "issuerCode",
         "issuerID", "issuerOrganization", "identityPayload", "attachmentURI"];
+    var reqBody = req.body;
     if (!reqBody) {
         res.status(400).json({ message: "Request body cannot be empty" });
         return;
@@ -140,7 +141,7 @@ exports.removeIdentity = function (req, res, next) {
                 res.status(500).json({ message: "Failed to delete identity for  " + req.params.identityCode });
             }
 
-            res.json({message : "Successfully deleted identity"});
+            res.json({ message: "Successfully deleted identity" });
 
         })
     })
