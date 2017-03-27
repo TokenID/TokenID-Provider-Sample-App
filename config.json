@@ -1,6 +1,6 @@
 {
     "mongoDatabaseUrl" : "mongodb://test_provider:Password12@ds139470.mlab.com:39470/tokenid_provider",
-    "blockChainAPIBase" : "http://tokenid-blockchain-api.herokuapp.com",
+    "blockChainAPI" : "https://tokenid-blockchain-api.mybluemix.net/blockchain",
     "blockChainAPIIssuer" : "issuers",
     "blockChainAPIIdentity" :"identity",
     "blockChainAPIInitializeIdentity" :"initialize/new"
