@@ -16,6 +16,7 @@ var IssuerSchema = new Schema({
     organization: String,
     enrollID: String,
     enrollSecret: String,
+    identityTypeCodes: { type: Array, default: [] },
     createdOn: { type: Date, default: Date.now },
     updatedOn: Date
 });

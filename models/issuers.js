@@ -8,7 +8,7 @@ var request = require("request");
 
 exports.createIssuer = function (req, res, next) {
     var reqBody = req.body;
-    var requiredFields = ["enrollID", "issuerCode", "issuerName", "issuerOrganization", "identityTypeCodes"]
+    var requiredFields = ["enrollID", "issuerCode", "issuerName", "organization", "identityTypeCodes"]
     if (!reqBody) {
         res.status(400).json({ message: "Request body cannot be empty" });
         return;
@@ -34,8 +34,9 @@ exports.createIssuer = function (req, res, next) {
 
 
     request.post({ uri: `${config.blockChainAPI}/${config.blockChainAPIIssuer}`, json: reqBody }, function (err, response, body) {
-        if (err) {
+        if (err || response.statusCode != 200) {
             res.status(500).json({ message: "Error registering issuer to blockchain" });
+            console.log(body);
             console.log(err);
             return;
         }
@@ -46,7 +47,7 @@ exports.createIssuer = function (req, res, next) {
                 console.log(err);
                 return;
             }
-            res.json({ message: "Issuer succesfully enrolled", credentials: body })
+            res.json({ message: "Issuer succesfully enrolled",issuerID  : reqBody.issuerID,  credentials: body })
 
         })
 
@@ -56,7 +57,7 @@ exports.createIssuer = function (req, res, next) {
 
 
 exports.getIssuers = function (req, res, next) {
-    schemaModels.Issuer.find().select("id issuerID issuerName issuerOrganization createdOn").exec(function (err, issuers) {
+    schemaModels.Issuer.find().select("id issuerID issuerName issuerCode enrollID organization identityTypeCodes createdOn lastUpdatedOn").exec(function (err, issuers) {
         if (err) {
             console.log(err);
             res.status(500).json({ message: "Failed to fetch issuers" });
