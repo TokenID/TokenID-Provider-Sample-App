@@ -79,7 +79,7 @@ exports.getIdentities = function (req, res, next) {
                 console.log(err);
                 res.status(500).json({ message: "Failed to fetch identities for  " + req.params.enrollmentID });
             }
-            res.json(body);
+            res.json(JSON.parse(body));
 
         })
     });
@@ -109,7 +109,7 @@ exports.getIdentity = function (req, res, next) {
                 console.log(err);
                 res.status(500).json({ message: "Failed to fetch identity for  " + req.params.identityCode });
             }
-            res.json(body);
+            res.json(JSON.parse(body));
 
         })
     })
