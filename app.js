@@ -1,5 +1,6 @@
 
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -14,6 +15,13 @@ var customers = require('./routes/customers');
 var partners = require('./routes/partners');
 
 var app = express();
+
+var sess = {
+  secret: 'secret',
+  cookie: {}
+};
+
+app.use(session(sess));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
